@@ -4,7 +4,7 @@ var userModel = mongoose.model('UserModel', userSchema);
 
 function findUserByCredentials(credentials) {
   console.log(credentials);
-  return userModel.findOne(credentials, {username: 1, password: 1, email: 1, firstName: 1, lastName: 1});
+  return userModel.findOne(credentials, {username: 1, password: 1, email: 1, firstName: 1, lastName: 1, phone: 1, address: 1});
 }
 
 function findUserById(userId) {
