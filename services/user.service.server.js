@@ -7,7 +7,6 @@ module.exports = function (app) {
   app.post('/api/login', login);
   app.put('/api/user', updateUser);
   app.get('/api/user/:username/username', findByUsername);
-  // app.get('/api/user/username/:username/password/:password', findByCredentials);
 
   var userModel = require('../models/user/user.model.server');
 
@@ -71,12 +70,4 @@ module.exports = function (app) {
               res.json(user);
           })
   }
-    // function findByCredentials(req, res) {
-    //     var username = req.params['username'];
-    //     userModel.findUserByCredentials(
-    //         {username: username})
-    //         .then(function (user) {
-    //             res.json(user);
-    //         })
-    // }
 }
