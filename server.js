@@ -1,7 +1,7 @@
 var express = require('express')
 var bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/webdev-summer1-2018-course-manager');
+mongoose.connect('mongodb://heroku_dkdk98rn:5go9gt74s4nd4kq7a62pegkrrs@ds163300.mlab.com:63300/heroku_dkdk98rn');
 
 
 var app = express()
@@ -65,4 +65,4 @@ userService(app);
 
 require('./services/section.service.server')(app);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
